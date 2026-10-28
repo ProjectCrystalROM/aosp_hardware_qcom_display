@@ -1,3 +1,4 @@
+ifneq ($(TARGET_USES_EXTERNAL_QCOM_DISPLAY),true)
 ifneq ($(filter msm8084 msm8x84,$(TARGET_BOARD_PLATFORM)),)
     #This is for 8084 based platforms
     include $(call all-named-subdir-makefiles,msm8084)
@@ -14,3 +15,5 @@ else
 endif
 endif
 endif
+
+endif # TARGET_USES_EXTERNAL_QCOM_DISPLAY
